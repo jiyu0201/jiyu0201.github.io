@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>纪雨 · 学术主页 | Yu Ji · Academic Homepage</title>
+<style>
+  :root {
+    /* 文青风配色 */
+    --bg: #f6f4ee;          /* 奶油白 */
+    --card: #ffffff;        /* 纯白卡片 */
+    --accent: #8cbf9f;      /* 清新浅绿 */
+    --accent2: #6fa88a;     /* 深一点的绿 */
+    --brown: #bfa58a;       /* 棕咖点缀 */
+    --text: #3b3b3b;        /* 深灰文字 */
+    --muted: #7a7a7a;       /* 次要文字 */
+  }
+  body {
+    margin:0; font-family:'Segoe UI','PingFang SC',sans-serif;
+    background:var(--bg); color:var(--text);
+  }
+
+  /* --- Nav --- */
+  header { background:var(--card); border-bottom:1px solid #e0ddd8; position:sticky; top:0; z-index:20; }
+  nav { max-width:1100px; margin:0 auto; padding:16px 24px; display:flex; justify-content:space-between; align-items:center; }
+  nav a { margin-left:22px; text-decoration:none; color:var(--text); font-weight:500; }
+  nav a:hover { color:var(--accent2); }
+
+  /* 语言切换按钮 */
+  .lang-switch { cursor:pointer; padding:6px 12px; border-radius:8px; border:1px solid var(--accent2); color:var(--accent2); font-size:14px; }
+  .lang-switch:hover { background:var(--accent2); color:white; }
+
+  /* --- Layout --- */
+  .hero { max-width:1100px; margin:40px auto; padding:0 24px; display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+
+  .photo-box { text-align:center; background:var(--card); border-radius:16px; padding:30px; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+  .photo {
+    width:180px;
+    height:180px;
+    border-radius:12px;
+    background:url('assets/avatar.jpg') center/cover no-repeat;
+    border:4px solid var(--accent);
+    margin:0 auto 20px auto; /* 居中对齐 */
+    display:block; /* 让 margin:auto 生效 */
+  }
+
+  .info-box { background:var(--card); border-radius:16px; padding:32px; box-shadow:0 4px 15px rgba(0,0,0,0.05); }
+  h1 { margin-top:0; font-size:32px; }
+  h2 { margin-bottom:6px; color:var(--accent2); font-size:22px; }
+  p { margin:10px 0; }
+
+  .tag-list { margin-top:16px; display:flex; flex-wrap:wrap; gap:10px; }
+  .tag { background:var(--accent); padding:6px 14px; color:white; border-radius:20px; font-size:14px; }
+
+  footer { text-align:center; padding:22px; color:var(--muted); margin-top:40px; }
+
+  @media(max-width:850px){ .hero{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <div style="font-weight:700;color:var(--accent2);font-size:18px;">纪雨 Yu Ji</div>
+    <div>
+      <a href="index.html" data-t="nav-home">首页</a>
+      <a href="papers.html" data-t="nav-papers">论文</a>
+      <a href="patents.html" data-t="nav-patents">专利</a>
+      <a href="projects.html" data-t="nav-projects">项目</a>
+      <a href="teaching.html" data-t="nav-teaching">教学</a>
+    </div>
+    <div class="lang-switch" id="langBtn">EN</div>
+  </nav>
+</header>
+
+<!-- =================== HOME =================== -->
+<div class="hero">
+
+  <!-- Photo card -->
+  <div class="photo-box">
+    <div class="photo"></div>
+    <h2 data-t="position">讲师 / 研究人员</h2>
+    <p class="muted" data-t="affiliation">上海工程技术大学 · 电子电气工程学院（计算机系）</p>
+  </div>
+
+  <!-- Info card -->
+  <div class="info-box">
+    <h1 data-t="name">纪雨 · Yu Ji</h1>
+
+    <h2 data-t="edu-title">教育背景（博士）</h2>
+    <p data-t="edu-detail"><strong>博士 · 计算机科学与技术</strong> · 华东师范大学<br>导师：贺樑 教授（华东师范大学计算机学院）<br>导师：胡谊 教授（华东师范大学心理与认知科学学院）<br>导师：吴雯 副教授（华东师范大学计算机学院）</p>
+
+    <h2 data-t="research-title">研究方向</h2>
+    <div class="tag-list">
+      <div class="tag" data-t="tag-ai">人格建模</div>
+      <div class="tag" data-t="tag-emotion">情绪建模</div>
+      <div class="tag" data-t="tag-sport">个性化推荐</div>
+      <div class="tag" data-t="tag-xai">可解释推荐</div>
+    </div>
+
+    <h2 style="margin-top:24px;" data-t="contact-title">联系方式</h2>
+    <p><strong data-t="email-label">邮箱：</strong> <span data-t="email-value">yuji0201@outlook.com</span></p>
+  </div>
+
+</div>
+
+<footer>© 2025 纪雨 · Academic Homepage</footer>
+
+<!-- =================== LANGUAGE SCRIPT =================== -->
+<script>
+const zh = {
+  'nav-home':'首页','nav-papers':'论文','nav-patents':'专利','nav-projects':'项目','nav-teaching':'教学',
+  'position':'讲师 / 研究人员',
+  'affiliation':'上海工程技术大学 · 电子电气工程学院（计算机系）',
+  'name':'纪雨 · Yu Ji',
+  'edu-title':'教育背景（博士）',
+  'edu-detail':'<strong>博士 · 计算机科学与技术</strong> · 华东师范大学<br>导师：贺樑 教授（华东师范大学计算机学院）<br>导师：胡谊 教授（华东师范大学心理与认知科学学院）<br>导师：吴雯 副教授（华东师范大学计算机学院）',
+  'research-title':'研究方向',
+  'tag-ai':'人格建模','tag-emotion':'情绪建模','tag-sport':'个性化推荐','tag-xai':'可解释推荐',
+  'contact-title':'联系方式','email-label':'邮箱：','email-value':'yuji0201@outlook.com'
+};
+
+const en = {
+  'nav-home':'Home','nav-papers':'Publications','nav-patents':'Patents','nav-projects':'Projects','nav-teaching':'Teaching',
+  'position':'Lecturer / Researcher',
+  'affiliation':'Shanghai University of Engineering Science · School of Electronics & Electrical Engineering (CS Dept.)',
+  'name':'Yu Ji',
+  'edu-title':'Education (Ph.D.)',
+  'edu-detail':'<strong>Ph.D. in Computer Science and Technology</strong> · East China Normal University (ECNU)<br>Supervisors: Prof. Liang He (School of Computer Science)<br>Prof. Yi Hu (School of Psychology and Cognitive Science)<br>Assoc. Prof. Wen Wu (School of Computer Science)',
+  'research-title':'Research Interests',
+  'tag-ai':'Personality Modeling','tag-emotion':'Emotion Modeling','tag-sport':'Personalized Recommendation','tag-xai':'Explainable Recommendation',
+  'contact-title':'Contact','email-label':'Email:','email-value':'yuji0201@outlook.com'
+};
+
+let current = 'zh';
+const btn = document.getElementById('langBtn');
+btn.onclick = () => {
+  current = current === 'zh' ? 'en' : 'zh';
+  btn.textContent = current === 'zh' ? 'EN' : '中';
+  const dict = current === 'zh' ? zh : en;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    el.innerHTML = dict[el.getAttribute('data-t')];
+  });
+};
+</script>
+
+</body>
+</html>
