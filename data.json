@@ -20,12 +20,15 @@
   ],
   "publications": [
     {
-      "venue": "Knowledge-Based Systems, 2025",
-      "title": "请替换为论文标题",
-      "authors": "Yu Ji, XXX, XXX",
-      "paper": "#",
-      "code": "#",
-      "project": "#"
+      "image": "assets/papers/paper1.jpg",
+      "title": "论文标题",
+      "authors": "Yu Ji, A, B, C",
+      "role": "Co-first author",
+      "venue": "Knowledge-Based Systems",
+      "year": "2025",
+      "paper": "https://...",
+      "code": "https://...",
+      "project": "https://..."
     }
   ],
   "education": [
