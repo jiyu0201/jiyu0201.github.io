@@ -170,19 +170,43 @@
 
     .pub-list {
       display: grid;
-      gap: 18px;
+      gap: 20px;
     }
 
     .pub-item {
-      padding: 18px 18px 14px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 18px;
+      padding: 18px;
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 16px;
       background: #fcfcfd;
+      align-items: start;
+    }
+
+    .pub-cover {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #f3f4f6;
+    }
+
+    .pub-main {
+      min-width: 0;
+    }
+
+    .pub-meta-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
     }
 
     .pub-venue {
       display: inline-block;
-      margin-bottom: 8px;
       padding: 4px 10px;
       border-radius: 999px;
       background: #f3f4f6;
@@ -192,16 +216,39 @@
       letter-spacing: 0.2px;
     }
 
+    .pub-year {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
     .pub-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
-      margin-bottom: 6px;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .pub-title a {
+      color: inherit;
     }
 
     .pub-authors {
-      color: var(--muted);
+      color: #374151;
       font-size: 14px;
       margin-bottom: 8px;
+    }
+
+    .pub-role {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
     }
 
     .pub-links {
@@ -209,6 +256,10 @@
       flex-wrap: wrap;
       gap: 12px;
       font-size: 14px;
+    }
+
+    .pub-links a {
+      padding: 4px 0;
     }
 
     footer {
@@ -226,6 +277,9 @@
         max-width: 220px;
       }
       .contact-list {
+        grid-template-columns: 1fr;
+      }
+      .pub-item {
         grid-template-columns: 1fr;
       }
       .name {
@@ -389,18 +443,35 @@
 
       setHTML(
         'pub-list',
-        (data.publications || []).map(pub => `
-          <div class="pub-item">
-            <div class="pub-venue">${pub.venue || ''}</div>
-            <div class="pub-title">${pub.title || ''}</div>
-            <div class="pub-authors">${pub.authors || ''}</div>
-            <div class="pub-links">
-              ${pub.paper ? `<a href="${pub.paper}" target="_blank">Paper</a>` : ''}
-              ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
-              ${pub.project ? `<a href="${pub.project}" target="_blank">Project</a>` : ''}
+        (data.publications || []).map(pub => {
+          const titleHTML = pub.paper
+            ? `<a href="${pub.paper}" target="_blank">${pub.title || ''}</a>`
+            : `${pub.title || ''}`;
+
+          const linkItems = [
+            pub.paper ? `<a href="${pub.paper}" target="_blank">Paper</a>` : '',
+            pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : '',
+            pub.project ? `<a href="${pub.project}" target="_blank">Project</a>` : ''
+          ].filter(Boolean).join('');
+
+          return `
+            <div class="pub-item">
+              <div>
+                <img class="pub-cover" src="${pub.image || 'https://via.placeholder.com/640x480.png?text=Publication'}" alt="${pub.title || 'publication image'}" />
+              </div>
+              <div class="pub-main">
+                <div class="pub-meta-top">
+                  <span class="pub-venue">${pub.venue || ''}</span>
+                  <span class="pub-year">${pub.year || ''}</span>
+                </div>
+                <div class="pub-title">${titleHTML}</div>
+                <div class="pub-authors">${(pub.authors || '').replace(/Yu Ji|纪雨/g, '<strong>$&</strong>')}</div>
+                ${pub.role ? `<div class="pub-role">${pub.role}</div>` : ''}
+                ${linkItems ? `<div class="pub-links">${linkItems}</div>` : ''}
+              </div>
             </div>
-          </div>
-        `).join('')
+          `;
+        }).join('')
       );
 
       setHTML(
