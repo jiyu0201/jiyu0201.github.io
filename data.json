@@ -1,0 +1,44 @@
+{
+  "basic": {
+    "name": "Yu Ji (纪雨)",
+    "position": "上海工程技术大学 讲师",
+    "bioLine": "研究方向聚焦于智能教育与智能心理。",
+    "email": "yuji0201@outlook.com",
+    "github": "https://github.com/jiyu0201",
+    "scholar": "https://scholar.google.com.hk/citations?user=wDj1i_kAAAAJ&hl=zh-CN",
+    "location": "Shanghai, China",
+    "photo": "assets/photo.jpg",
+    "tags": ["智能教育", "智能心理"]
+  },
+  "about": [
+    "我目前任职于上海工程技术大学，主要从事智能教育与智能心理相关研究。",
+    "欢迎围绕智能教育、学习分析、教育推荐、心理健康支持与个性化干预等方向开展学术交流与合作。"
+  ],
+  "news": [
+    "2026.03：请在这里填写最新动态。",
+    "2025.12：请在这里填写论文、项目或获奖信息。"
+  ],
+  "publications": [
+    {
+      "venue": "Knowledge-Based Systems, 2025",
+      "title": "请替换为论文标题",
+      "authors": "Yu Ji, XXX, XXX",
+      "paper": "#",
+      "code": "#",
+      "project": "#"
+    }
+  ],
+  "education": [
+    "20XX.09 - 20XX.06，某大学，某专业，博士",
+    "20XX.XX - 至今，上海工程技术大学，讲师"
+  ],
+  "services": [
+    "Reviewer for IEEE Transactions on Affective Computing",
+    "Reviewer for Knowledge-Based Systems"
+  ],
+  "projects": [
+    "国家自然科学基金青年项目，主持，20XX-20XX",
+    "某省部级项目，参与，20XX-20XX"
+  ],
+  "footer": "© Last Updated: March 2026"
+}

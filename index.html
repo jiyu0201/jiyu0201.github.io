@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yu Ji (纪雨) - Homepage</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #1d4ed8;
+      --accent-light: #dbeafe;
+      --max-width: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 64px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 40px 0 24px;
+    }
+
+    .hero-card {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .avatar {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: #eef2ff;
+    }
+
+    .name {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.2;
+    }
+
+    .title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-size: 15px;
+    }
+
+    section {
+      margin: 22px 0;
+    }
+
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 26px 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .news-list,
+    .timeline,
+    .service-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .news-list li,
+    .timeline li,
+    .service-list li {
+      margin: 10px 0;
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .pub-item {
+      padding: 18px 18px 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fcfcfd;
+    }
+
+    .pub-venue {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f3f4f6;
+      color: #374151;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .pub-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .pub-authors {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .pub-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 28px 0 48px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+      }
+      .avatar-wrap {
+        max-width: 220px;
+      }
+      .contact-list {
+        grid-template-columns: 1fr;
+      }
+      .name {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" id="nav-brand">Yu Ji (纪雨)</div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="avatar-wrap">
+          <img class="avatar" id="profile-photo" src="https://via.placeholder.com/500x500.png?text=Your+Photo" alt="Yu Ji (纪雨)" />
+        </div>
+        <div>
+          <h1 class="name" id="name">Yu Ji (纪雨)</h1>
+          <div class="title" id="position">上海工程技术大学 讲师</div>
+          <div class="subtitle" id="bio-line">研究方向聚焦于智能教育与智能心理。</div>
+
+          <div class="tag-list" id="research-tags"></div>
+
+          <ul class="contact-list">
+            <li><strong>Email：</strong><a id="email-link" href="mailto:yuji0201@outlook.com">yuji0201@outlook.com</a></li>
+            <li><strong>GitHub：</strong><a id="github-link" href="https://github.com/jiyu0201" target="_blank">github.com/jiyu0201</a></li>
+            <li><strong>Google Scholar：</strong><a id="scholar-link" href="https://scholar.google.com.hk/citations?user=wDj1i_kAAAAJ&hl=zh-CN" target="_blank">Scholar Profile</a></li>
+            <li><strong>Location：</strong><span id="location">Shanghai, China</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-card">
+        <h2>About Me</h2>
+        <div id="about-content"></div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="section-card">
+        <h2>News</h2>
+        <ul class="news-list" id="news-list"></ul>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="section-card">
+        <h2>Selected Publications</h2>
+        <div class="muted" style="margin-bottom:14px;">可先放 5–10 篇代表作，后续再扩展为完整论文列表。</div>
+        <div class="pub-list" id="pub-list"></div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-card">
+        <h2>Education / Experience</h2>
+        <ul class="timeline" id="education-list"></ul>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-card">
+        <h2>Academic Services</h2>
+        <ul class="service-list" id="service-list"></ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-card">
+        <h2>Projects / Grants</h2>
+        <ul class="timeline" id="project-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer-text">© Last Updated: March 2026</div>
+  </footer>
+
+  <script>
+    async function loadData() {
+      const response = await fetch('./data.json');
+      if (!response.ok) {
+        throw new Error(`Failed to load data.json: ${response.status}`);
+      }
+      return await response.json();
+    }
+
+    function setText(id, text) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = text || '';
+    }
+
+    function setHTML(id, html) {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    }
+
+    function render(data) {
+      const basic = data.basic || {};
+      document.title = `${basic.name || 'Homepage'} - Homepage`;
+      setText('nav-brand', basic.name || 'Homepage');
+      setText('name', basic.name || '');
+      setText('position', basic.position || '');
+      setText('bio-line', basic.bioLine || '');
+      setText('location', basic.location || '');
+      setText('footer-text', data.footer || '');
+
+      const photo = document.getElementById('profile-photo');
+      if (photo) {
+        photo.src = basic.photo || 'https://via.placeholder.com/500x500.png?text=Your+Photo';
+        photo.alt = basic.name || 'profile photo';
+      }
+
+      const emailLink = document.getElementById('email-link');
+      if (emailLink) {
+        emailLink.href = `mailto:${basic.email || ''}`;
+        emailLink.textContent = basic.email || '';
+      }
+
+      const githubLink = document.getElementById('github-link');
+      if (githubLink) {
+        githubLink.href = basic.github || '#';
+        githubLink.textContent = (basic.github || '').replace(/^https?:\/\//, '');
+      }
+
+      const scholarLink = document.getElementById('scholar-link');
+      if (scholarLink) {
+        scholarLink.href = basic.scholar || '#';
+      }
+
+      setHTML(
+        'research-tags',
+        (basic.tags || []).map(tag => `<span class="tag">${tag}</span>`).join('')
+      );
+
+      setHTML(
+        'about-content',
+        (data.about || []).map(p => `<p>${p}</p>`).join('')
+      );
+
+      setHTML(
+        'news-list',
+        (data.news || []).map(item => `<li>${item}</li>`).join('')
+      );
+
+      setHTML(
+        'pub-list',
+        (data.publications || []).map(pub => `
+          <div class="pub-item">
+            <div class="pub-venue">${pub.venue || ''}</div>
+            <div class="pub-title">${pub.title || ''}</div>
+            <div class="pub-authors">${pub.authors || ''}</div>
+            <div class="pub-links">
+              ${pub.paper ? `<a href="${pub.paper}" target="_blank">Paper</a>` : ''}
+              ${pub.code ? `<a href="${pub.code}" target="_blank">Code</a>` : ''}
+              ${pub.project ? `<a href="${pub.project}" target="_blank">Project</a>` : ''}
+            </div>
+          </div>
+        `).join('')
+      );
+
+      setHTML(
+        'education-list',
+        (data.education || []).map(item => `<li>${item}</li>`).join('')
+      );
+
+      setHTML(
+        'service-list',
+        (data.services || []).map(item => `<li>${item}</li>`).join('')
+      );
+
+      setHTML(
+        'project-list',
+        (data.projects || []).map(item => `<li>${item}</li>`).join('')
+      );
+    }
+
+    function renderError(message) {
+      setHTML('about-content', `<p style="color:#b91c1c;">${message}</p>`);
+      setHTML('news-list', '');
+      setHTML('pub-list', '');
+      setHTML('education-list', '');
+      setHTML('service-list', '');
+      setHTML('project-list', '');
+    }
+
+    loadData()
+      .then(render)
+      .catch(error => {
+        console.error(error);
+        renderError('无法读取 data.json。请确认 index.html 与 data.json 在同一目录下，并使用本地服务器或 GitHub Pages 打开页面。');
+      });
+  </script>
+</body>
+</html>
