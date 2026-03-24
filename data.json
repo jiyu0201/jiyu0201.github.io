@@ -7,41 +7,67 @@
     "github": "https://github.com/jiyu0201",
     "scholar": "https://scholar.google.com.hk/citations?user=wDj1i_kAAAAJ&hl=zh-CN",
     "location": "Shanghai, China",
-    "photo": "MyPhoto.jpg",
+    "photo": "assets/photo.jpg",
     "tags": ["智能教育", "智能心理"]
   },
+
   "about": [
     "我目前任职于上海工程技术大学，主要从事智能教育与智能心理相关研究。",
-    "欢迎围绕智能教育、学习分析、教育推荐、心理健康支持与个性化干预等方向开展学术交流与合作。"
+    "研究兴趣包括智能教育、学习分析、教育推荐、情绪调节与个性化干预等方向。"
   ],
+
   "news": [
-    "2026.03.24：🎉KSEM2026接收1篇论文",
-    "2026.01.27：🎉DASFAA2026接收1篇论文"
+    "2026.03：论文被某会议接收。",
+    "2025.12：主持项目获批。",
+    "2025.08：在某会议作报告。"
   ],
-  "publications": [
-    {
-      "image": "assets/papers/paper1.jpg",
-      "title": "论文标题",
-      "authors": "Yu Ji, A, B, C",
-      "role": "Co-first author",
-      "venue": "Knowledge-Based Systems",
-      "year": "2025",
-      "paper": "https://...",
-      "code": "https://...",
-      "project": "https://..."
-    }
-  ],
+
   "education": [
-    "20XX.09 - 20XX.06，某大学，某专业，博士",
+    "20XX.09 - 20XX.06，华东师范大学，智能教育/计算机相关专业，博士",
+    "20XX.09 - 20XX.06，某大学，本科",
     "20XX.XX - 至今，上海工程技术大学，讲师"
   ],
+
   "services": [
     "Reviewer for IEEE Transactions on Affective Computing",
     "Reviewer for Knowledge-Based Systems"
   ],
+
   "projects": [
-    "国家自然科学基金青年项目，主持，20XX-20XX",
-    "某省部级项目，参与，20XX-20XX"
+    "国家自然科学基金青年项目，主持，20XX–20XX",
+    "科技部重点研发计划课题，参与，2023–2026",
+    "某省部级项目，参与，20XX–20XX"
   ],
+
+  "patents": [
+    "一种XXX方法，发明专利，授权号：XXX，2025",
+    "一种XXX系统，发明专利，申请号：XXX，2024"
+  ],
+
+  "publications": [
+    {
+      "image": "assets/papers/paper1.jpg",
+      "title": "论文标题1",
+      "authors": "Yu Ji, A. Smith, B. Wang",
+      "role": "First author",
+      "venue": "Knowledge-Based Systems",
+      "year": "2025",
+      "paper": "https://example.com",
+      "code": "https://github.com/xxx",
+      "project": ""
+    },
+    {
+      "image": "assets/papers/paper2.jpg",
+      "title": "论文标题2（无链接示例）",
+      "authors": "A. Smith, Yu Ji, C. Zhang",
+      "role": "Co-first author",
+      "venue": "AAAI",
+      "year": "2024",
+      "paper": "",
+      "code": "",
+      "project": ""
+    }
+  ],
+
   "footer": "© Last Updated: March 2026"
 }
