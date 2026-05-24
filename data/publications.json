@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Beyond True Label: Label-Assumed Evidence Extraction for Personality Prediction",
+    "venue": "DASFAA",
+    "level": "CCF B",
+    "authors": "Yu Ji, Zhe Huang, Xiang Liu, Yunyu Shi, Wen Wu",
+    "role": "First Author",
+    "link": "https://link.springer.com/chapter/10.1007/978-981-92-0372-7_4",
+    "accepted_date": "2026-04-27"
+  },
+  {
+    "title": "Demographic-Guided Behavior Patterns Contrast for Personality Prediction",
+    "venue": "IEEE Transactions on Affective Computing",
+    "level": "SCI District 1",
+    "authors": "Yu Ji, Wen Wu, Hui Lin, Wenxin Hu, Yi Hu, Liang Kang, Xi Chen, Liang He",
+    "role": "First Author",
+    "link": "https://ieeexplore.ieee.org/abstract/document/10778411",
+    "accepted_date": "2024-12-05"
+  },
+  {
+    "title": "Personality-Driven Experience Storage and Retrieval for Sentiment Classification",
+    "venue": "The Journal of Supercomputing",
+    "level": "SCI District 3",
+    "authors": "Yu Ji, Wen Wu, Hui Lin, Wenxin Hu, Yi Hu, Liang Kang, Xi Chen, Liang He",
+    "role": "First Author",
+    "link": "https://link.springer.com/article/10.1007/s11227-024-06170-1",
+    "accepted_date": "2024-05-19"
+  },
+  {
+    "title": "Personality-Assisted Mood Modeling with Historical Reviews for Sentiment Classification",
+    "venue": "Information Sciences",
+    "level": "SCI District 2",
+    "authors": "Yu Ji, Wen Wu, Yi Hu, Xi Chen, Jiayi Chen, Wenxin Hu, Liang He",
+    "role": "First Author",
+    "link": "https://www.sciencedirect.com/science/article/abs/pii/S0020025523012306",
+    "accepted_date": "2023-11-01"
+  },
+  {
+    "title": "Automatic Personality Prediction Based on Users' Chinese Handwriting Change",
+    "venue": "CCF Conference on Computer Supported Cooperative Work and Social Computing",
+    "level": "None",
+    "authors": "Yu Ji, Wen Wu, Yi Hu, Xiaofeng He, Changzhi Chen, Liang He",
+    "role": "First Author",
+    "link": "https://link.springer.com/chapter/10.1007/978-981-99-2385-4_33",
+    "accepted_date": "2022-09-23"
+  },
+  {
+    "title": "Two-Stage Sentiment Classification Based on User-Product Interactive Information",
+    "venue": "Knowledge-Based Systems",
+    "level": "SCI District 1",
+    "authors": "Yu Ji, Wen Wu, Shiyun Chen, Qin Chen, Wenxin Hu, Liang He",
+    "role": "First Author",
+    "link": "https://link.springer.com/chapter/10.1007/978-981-99-2385-4_33",
+    "accepted_date": "2020-09-05"
+  }
+]
