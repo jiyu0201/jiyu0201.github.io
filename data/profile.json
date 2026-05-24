@@ -1,0 +1,19 @@
+{
+  "site": {
+    "last_updated": "2026"
+  },
+  "photo": "assets/img/profile.jpg",
+  "name": "Yu Ji",
+  "title": [
+    "Lecturer, Department of Computer Science, Shanghai University of Engineering Science",
+    "Ph.D., School of Computer Science and Technology, East China Normal University"
+  ],
+  "email": "your-email@sues.edu.cn",
+  "scholar_text": "Google Scholar Profile",
+  "scholar_url": "https://scholar.google.com/",
+  "address": "333 Longteng Road, Songjiang District, Shanghai, China",
+  "research_summary": "My research focuses on user psychological modeling, affective computing, personality analysis, large language models, multi-agent systems, and personalized human-AI interaction.",
+  "bio": [
+    "I welcome academic exchanges and collaborations."
+  ]
+}
